@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Books UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Books</a>
+        <a href="Reviews.html">Reviews</a>
+        <a class="active" href="Books.html">Books</a>
+        <a href="NonCrud.html">non-CRUD Actions</a>
+
+    </div>
+
+    <h1>Books Catalog</h1>
+
+
+    <div id="formdiv">
+        <label>Book Title</label>
+        <input type="text" id="booktitle" />
+        <label>Book Length</label>
+        <input type="number" id="booklength" min="1" max="10">
+       
+        <label>Book Author</label>
+        <input type="text" id="bookauthor" />
+
+        <button type="button" onclick="create()">Add Book</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Length</th>
+                <th>Author</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="Books.js"></script>
+</body>
+</html>

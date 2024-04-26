@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reviews UI</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="topnav">
+        <a href="index.html">Authors</a>
+        <a class="active" href="Reviews.html">Reviews</a>
+        <a href="Books.html">Books</a>
+        <a href="NonCrud.html">non-CRUD Actions</a>
+    </div>
+
+    <h1>Reviews Catalog</h1>
+
+
+
+    <div id="formdiv">
+        <label>Reviews Name</label>
+        <input type="text" id="reviewname" />
+        <label>Reviews Description</label>
+        <input type="text" id="reviewdesc" />
+        <label>Reviews Rating</label>
+        <input type="text" id="reviewrating" />
+
+        <button type="button" onclick="create()">Add Reviews</button>
+    </div>
+    <div id="updateformdiv">
+
+        <label>Reviews Description</label>
+        <input type="text" id="reviewDescToUpdate" />
+        <button type="button" onclick="update()">Update Reviews</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Desc</th>
+                <th>Rating</th>
+            </tr>
+        </thead>
+        <tbody id="resultarea">
+        </tbody>
+    </table>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="Reviews.js"></script>
+</body>
+</html>
